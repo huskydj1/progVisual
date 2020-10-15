@@ -1,15 +1,15 @@
 import javax.swing.JFrame;
 import java.awt.Rectangle;
 
-public class arrayVisual {
+public class basicStructure {
     public static void main(String[] args) {
         JFrame window = new JFrame();
-        window.setSize(640, 480); //TODO: Parameterize theses
-        window.setTitle("Array Visualization");
+        window.setSize(640, 480);
+        window.setTitle("This is a frame of J, otherwise known as a JFrame");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
 
-        int[] arr = {10, 100, 200, 300, 901}; //TODO: Parameterize Visualization
+        int[] arr = {1, 2, 3};
         draw1DArray DC = new draw1DArray("Array Example", arr, 50, 50);
         window.add(DC);
     }
