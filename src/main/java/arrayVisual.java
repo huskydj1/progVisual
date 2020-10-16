@@ -10,7 +10,7 @@ public class arrayVisual {
         window.setVisible(true);
 
         int[] arr = {10, 100, 200, 300, 901}; //TODO: Parameterize Visualization
-        draw1DArray DC = new draw1DArray("Array Example", arr, 50, 50);
+        draw1DArray DC = new draw1DArray("Array Example", arr, 5, 10);
         window.add(DC);
     }
 }

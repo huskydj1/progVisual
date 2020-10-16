@@ -13,6 +13,9 @@ Create a running graphic simulating/visualizing a basic program.
 - Stack, Queue, Deque
 - ArrayList
 - Graphs (and arranging them in specific ways)
+- Generic types
+- Observing changes. Some type of "watched array"
+  - https://stackoverflow.com/questions/43019605/java-how-to-detect-when-a-attribute-of-an-object-has-changed
 
 ## Resources:
 - Please help me by adding useful links/resources! I am currently looking for more information/tutorials about [Java's 2D API](https://docs.oracle.com/javase/tutorial/2d/index.html).
