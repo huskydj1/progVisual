@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
-public class stackVisual {
+public class arrayListVisual {
 
     private ArrayList<int[]> tList;
     private ArrayList<String> tNames;
@@ -12,10 +12,15 @@ public class stackVisual {
         tNames = new ArrayList<String>();
     }
 
-    public void newArray(String name, int[] arr){
+    public void newArray(String name, ArrayList<Integer> arr){
         tNames.add(name);
-        //TODO: Convert to stack
-        tList.add(arr);
+
+        //Simply Convert to primitive Array Type
+        int[] tmp = new int[arr.size()];
+        for(int i = 0; i<arr.size(); ++i){
+            tmp[i] = arr.get(i);
+        }
+        tList.add(tmp);
     }
 
     public void visualize(){
@@ -26,7 +31,6 @@ public class stackVisual {
         window.setVisible(true);
 
         draw1DArray DC = new draw1DArray();
-        //TODO: Modify "draw1DArray" slightly to represent a LIFO structure
         DC.addListArray(tList, tNames);
 
         window.add(DC);

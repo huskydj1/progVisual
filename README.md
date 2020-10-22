@@ -5,13 +5,15 @@ Create a running graphic simulating/visualizing a basic program.
 
 ## Completed Features:
 - Array: Display/Refresh
+- Array: Parameterize Aspects of Array
+- ArrayList
 
 ## Features in Progress
-- Array: Parameterize Aspects of Array, Pointers
+- Stack
+- Queue
+- Deque
 
 ## Future Features:
-- Stack, Queue, Deque
-- ArrayList
 - Graphs (and arranging them in specific ways)
 - Generic types
 - Observing changes. Some type of "watched array"

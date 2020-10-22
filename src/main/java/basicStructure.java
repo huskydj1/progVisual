@@ -8,9 +8,5 @@ public class basicStructure {
         window.setTitle("This is a frame of J, otherwise known as a JFrame");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
-
-        int[] arr = {1, 2, 3};
-        draw1DArray DC = new draw1DArray("Array Example", arr, 50, 50);
-        window.add(DC);
     }
 }
