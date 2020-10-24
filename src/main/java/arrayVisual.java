@@ -7,25 +7,40 @@ public class arrayVisual {
     private ArrayList<int[]> tList;
     private ArrayList<String> tNames;
 
-    public void init(){
+    public void clear(){
         tList = new ArrayList<int[]>();
         tNames = new ArrayList<String>();
     }
 
-    public void newArray(String name, int[] arr){
+    public arrayVisual(){
+        tList = new ArrayList<int[]>();
+        tNames = new ArrayList<String>();
+    }
+
+    public void add(String name, int[] arr){
         tNames.add(name);
         tList.add(arr);
     }
 
+    public boolean remove(String name){
+        int index = tNames.indexOf(name);
+        if(index==-1) return false;
+        else{
+            tNames.remove(index);
+            tList.remove(index);
+            return true;
+        }
+    }
+
     public void visualize(){
         JFrame window = new JFrame();
-        window.setSize(640, 480); //TODO: Parameterize theses
-        window.setTitle("Array Visualization");
+        window.setSize(640, 480);
+        window.setTitle("Visualization");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
 
         draw1DArray DC = new draw1DArray();
-        DC.addListArray(tList, tNames);
+        DC.addCompleteList(tList, tNames);
 
         window.add(DC);
     }

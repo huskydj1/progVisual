@@ -1,10 +1,6 @@
 import javax.swing.JComponent;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class draw1DArray extends JComponent{
 
@@ -16,12 +12,7 @@ public class draw1DArray extends JComponent{
         names = new ArrayList<String>();
     }
 
-    public void addArray(String ArrayName, int[] IntegerArray){
-        names.add(ArrayName);
-        list.add(IntegerArray);
-    }
-
-    public void addListArray(ArrayList<int[]> list, ArrayList<String> names){
+    public void addCompleteList(ArrayList<int[]> list, ArrayList<String> names){
         this.list = list;
         this.names = names;
     }
@@ -50,6 +41,7 @@ public class draw1DArray extends JComponent{
         arrayName = arrayName.trim();
         g.drawString(arrayName + ":", x, y+20);
 
+        //Iterate through and visualize each cell
         int x1 = x, y1 = y+25;
         for(int i = 0; i<arr.length; i++){
             String content = Integer.toString(arr[i]);
