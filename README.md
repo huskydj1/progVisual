@@ -23,6 +23,8 @@
 - Graphs (+ arranging them as trees, undirected/directed, etc)
 
 ## Resources:
+- ["How to Write a Git Commit Message" - Chris Beams](https://chris.beams.io/posts/git-commit/#imperative)
+- [Choose an open source license](https://choosealicense.com/)
 - Developing new Java Libraries:
   - ["How can I develop my own Java Library? [closed] - stackoverflow](https://stackoverflow.com/questions/6496597/how-can-i-develop-my-own-java-library)
 - Graphics Tutorials:
