@@ -12,16 +12,17 @@
 
 ## Features in Progress:
 - Implement mainWindow:
-  - Adding and Remove Various Type DataStructures onto our Window
-  - Observing changes. Some type of "watched list"
+  - Add and Remove Various Type DataStructures onto our Window
+  - Observe changes. Some type of "watched list" for all datatypes told to watch
     - https://stackoverflow.com/questions/43019605/java-how-to-detect-when-a-attribute-of-an-object-has-changed
 
 ## Future Features:
-- ArrayList:
-  - Piggyback off of Array
+- ArrayList
 - Stack
 - Queue
 - Deque
+
+## Reach Features
 - Graphs (+ arranging them as trees, undirected/directed, etc)
 
 ## Resources:
