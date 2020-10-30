@@ -12,7 +12,7 @@
 
 ## Features in Progress:
 - Implement mainWindow:
-  - Add and Remove Various Type DataStructures onto our Window
+  - Capability of adding/removing variables to track in the main window
 - ArrayList
   - Each instance stores history of changes. This should be used in paintComponent to create a scrollable log of 
   different states of the ArrayList
@@ -21,11 +21,12 @@
   my visuals
  
 ## Future Features:
-- Stack
-- Queue
-- Deque
+- Implement for other data structures:
+  - Stack
+  - Queue
+  - Deque
 
-## Reach Features
+## "Reach" Features
 - Graphs (+ arranging them as trees, undirected/directed, etc)
 
 ## Resources:
@@ -43,11 +44,12 @@
 - Java Observers:
   - https://www.baeldung.com/java-observer-pattern
 - GUI Details:
-  - https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html
-  - https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html#properties
-  - https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html#getFontMetrics()
-  - https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding
-  - https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston
+  - Java Documentation Tutorials:
+    - https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html
+    - https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html#properties
+    - https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html#getFontMetrics()
+  - [Keep on Coding's "Java Generics Tutorial"](https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding)
+  - [Bucky's "Generic Return Types"] (https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
 
 ## Suggestions/Ideas/Questions:
 - All comments, questions, and ideas are appreciated!
