@@ -15,21 +15,22 @@ public class mainWindow{
         //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         JTabbedPane tabbedPane = new JTabbedPane();
         //<
+        //TODO: Make main a method (without this inbetween tester code). Use wrapper classes to store watched objects
 
         String[] arrS = {"Hello", "My", "Name", "JEFF"};
-        ArrayVisual<String> tabS = new ArrayVisual(arrS, "String Array");
+        ArrayVisual<String> tabS = new ArrayVisual<String>(arrS, "String Array");
         tabbedPane.addTab("Tab 1", tabS);
 
         Integer[] arrI = {1, 2, 3, 4, 1000, 200000};
-        ArrayVisual<Integer> tabI = new ArrayVisual(arrI, "Integer Array");
+        ArrayVisual<Integer> tabI = new ArrayVisual<Integer>(arrI, "Integer Array");
         tabbedPane.addTab("Tab 2", tabI);
 
         Double[] arrD = {1.2, 2.0, 3.5, 4.9, 1000.020, 200000.14};
-        ArrayVisual<Double> tabD = new ArrayVisual(arrD, "Double Array");
+        ArrayVisual<Double> tabD = new ArrayVisual<Double>(arrD, "Double Array");
         tabbedPane.addTab("Tab 3", tabD);
 
         Character[] arrC = {'a', 'b', 'c', 'd', 'e', '.', 'z'};
-        ArrayVisual<Character> tabC = new ArrayVisual(arrC, "Character Array");
+        ArrayVisual<Character> tabC = new ArrayVisual<Character>(arrC, "Character Array");
         tabbedPane.addTab("Tab 4", tabC);
 
         //>

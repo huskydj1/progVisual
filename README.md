@@ -13,11 +13,14 @@
 ## Features in Progress:
 - Implement mainWindow:
   - Add and Remove Various Type DataStructures onto our Window
-  - Observe changes. Some type of "watched list" for all datatypes told to watch
-    - https://stackoverflow.com/questions/43019605/java-how-to-detect-when-a-attribute-of-an-object-has-changed
-
-## Future Features:
 - ArrayList
+  - Each instance stores history of changes. This should be used in paintComponent to create a scrollable log of 
+  different states of the ArrayList
+  - Learn about interfaces and how I can use that to add my operations to ArrayList. Essentially, people can 
+  just modify their ArrayList interface and their program will work the same except now they will have 
+  my visuals
+ 
+## Future Features:
 - Stack
 - Queue
 - Deque
