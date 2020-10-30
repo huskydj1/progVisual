@@ -45,11 +45,11 @@
   - https://www.baeldung.com/java-observer-pattern
 - GUI Details:
   - Java Documentation Tutorials:
-    - https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html
-    - https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html#properties
-    - https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html#getFontMetrics()
+    - ["How to Use Tabbed Panes"](https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html)
+    - ["The JComponent Class"](https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html)
+    - ["java.awt - Class Graphics"](https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html)
   - [Keep on Coding's "Java Generics Tutorial"](https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding)
-  - [Bucky's "Generic Return Types"] (https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
+  - [Bucky's "Generic Return Types"](https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
 
 ## Suggestions/Ideas/Questions:
 - All comments, questions, and ideas are appreciated!
