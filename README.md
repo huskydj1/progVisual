@@ -8,15 +8,17 @@
 - Array:
     - Display/Refresh
     - Parameterize Aspects of Array
-- ArrayList:
-    - Piggyback off of Array
+- Generic types
 
 ## Features in Progress:
-- Generic types
-- Observing changes. Some type of "watched array"
-  - https://stackoverflow.com/questions/43019605/java-how-to-detect-when-a-attribute-of-an-object-has-changed
+- Implement mainWindow:
+  - Adding and Remove Various Type DataStructures onto our Window
+  - Observing changes. Some type of "watched list"
+    - https://stackoverflow.com/questions/43019605/java-how-to-detect-when-a-attribute-of-an-object-has-changed
 
 ## Future Features:
+- ArrayList:
+  - Piggyback off of Array
 - Stack
 - Queue
 - Deque
@@ -36,6 +38,12 @@
   - https://www.softwaretestinghelp.com/java-generic-array/
 - Java Observers:
   - https://www.baeldung.com/java-observer-pattern
+- GUI Details:
+  - https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html
+  - https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html#properties
+  - https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html#getFontMetrics()
+  - https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding
+  - https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston
 
 ## Suggestions/Ideas/Questions:
 - All comments, questions, and ideas are appreciated!
