@@ -39,3 +39,10 @@
 
 ## Suggestions/Ideas/Questions:
 - All comments, questions, and ideas are appreciated!
+
+- I don't know how possible this is, but it would be really cool if you could edit the arrays and array lists by messing with the graphic created.  From what I remember, I think that would be pretty difficult.  
+    - What I mean by this is that you could switch around the order of an array by moving around elements, add elements to array lists, etc.  I'm kind of excited about your project, in that I really want to use it!  
+- I really like how you can piggyback off of an array to make the arraylist - do you think you could do the same thing but in the opposite direction? (Array-list -> array).
+- Is something like this what you are envisioning? http://www1.cs.columbia.edu/~bert/courses/3137/hw3_files/GraphDraw.java
+
+
