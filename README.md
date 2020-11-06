@@ -12,19 +12,15 @@
 
 ## Features in Progress:
 - Implement mainWindow:
-  - Capability of adding/removing variables to track in the main window
+  - Ability to navigate between variables and their observed changes
 - ArrayList
-  - Each instance stores history of changes. This should be used in paintComponent to create a scrollable log of 
+  - Each instance stores history of changes. This should be used in mainWindow to create a scrollable log of 
   different states of the ArrayList
-  - Learn about interfaces and how I can use that to add my operations to ArrayList. Essentially, people can 
-  just modify their ArrayList interface and their program will work the same except now they will have 
-  my visuals
+ - Stack
+ - Deque
+ - Queue
  
 ## Future Features:
-- Implement for other data structures:
-  - Stack
-  - Queue
-  - Deque
 
 ## "Reach" Features
 - Graphs (+ arranging them as trees, undirected/directed, etc)
