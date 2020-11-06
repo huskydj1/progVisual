@@ -6,6 +6,8 @@ public class DrawArray<D> extends JComponent{
     public static final int HORIZONTAL = 0, VERTICAL = 1;
     public static final int NONE = 2, FRONT = 3, BACK = 4, BOTH = 5;
 
+    public int x = 25, y = 25;
+
     private D[] arr;
     private int orientation;
     private int opening;
@@ -18,6 +20,11 @@ public class DrawArray<D> extends JComponent{
         this.opening = opening;
     }
 
+    public void setXY (int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
@@ -27,7 +34,6 @@ public class DrawArray<D> extends JComponent{
         g.setColor(Color.DARK_GRAY);
 
         //Generate Rectangle
-        int x = 25, y = 25;
 
         /*
         //When I stored an ArrayList of arrays
@@ -37,24 +43,31 @@ public class DrawArray<D> extends JComponent{
         }
         System.out.println(list.size());
          */
-        if(orientation==DrawArray.HORIZONTAL){
-            g = insertHorizontalArray(this.name, this.arr, x, y, g);
-        }
-        else if(orientation==DrawArray.VERTICAL){
-            g = insertVerticalArray(this.name, this.arr, x, y, g);
-        }
 
+        g = insertArray(g);
         return;
     }
 
-    private Graphics insertHorizontalArray(String arrayName, D[] arr, int x, int y, Graphics g){
+    public Graphics insertArray(Graphics g){
+        if(orientation==DrawArray.HORIZONTAL){
+            g = insertHorizontalArray(g);
+        }
+        else if(orientation==DrawArray.VERTICAL){
+            g = insertVerticalArray(g);
+        }
+        return g;
+    }
+
+    private Graphics insertHorizontalArray(Graphics g){
         //Display Name
-        arrayName = arrayName.trim();
+        String arrayName = this.name.trim();
         g.drawString(arrayName + ":", x, y+20);
         if(arr.length==0){
-            g.setColor(Color.red);
+            g.setColor(Color.MAGENTA);
             g.drawString("EMPTY OBJECT PASSED", x, y+50);
             g.setColor(Color.darkGray);
+
+            y+=60;
             return g;
         }
 
@@ -96,17 +109,20 @@ public class DrawArray<D> extends JComponent{
             //Update (x, y) pointer
             x1+=width;
         }
+        y = y1 + 90;
         return g;
     }
 
-    private Graphics insertVerticalArray(String arrayName, D[] arr, int x, int y, Graphics g) {
+    private Graphics insertVerticalArray(Graphics g) {
         //Display Name
-        arrayName = arrayName.trim();
+        String arrayName = name.trim();
         g.drawString(arrayName + ":", x, y + 20);
         if (arr.length == 0) {
             g.setColor(Color.red);
             g.drawString("EMPTY OBJECT PASSED", x, y + 50);
             g.setColor(Color.darkGray);
+
+            y+=60;
             return g;
         }
 
@@ -156,6 +172,7 @@ public class DrawArray<D> extends JComponent{
         int[] triangleX = {x1 + maxWidth/2, x1 + maxWidth/2 - 10, x1 + maxWidth/2 + 10}, triangleY = {y1 + 10, y1 + 20, y1 + 20};
         g.drawPolygon(triangleX, triangleY, 3);
 
+        y = y1 + 25;
         return g;
     }
 }

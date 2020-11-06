@@ -9,16 +9,17 @@
     - Display/Refresh
     - Parameterize Aspects of Array
 - Generic types
+- Observers:
+    - ArrayList
 
 ## Features in Progress:
 - Implement mainWindow:
-  - Ability to navigate between variables and their observed changes
-- ArrayList
-  - Each instance stores history of changes. This should be used in mainWindow to create a scrollable log of 
-  different states of the ArrayList
- - Stack
- - Deque
- - Queue
+  - Devise a way to allow user to add tabs/variables without touching this class
+- Add wrapper methods for rest of features to observe changes
+     - Stack
+     - Deque
+     - Queue
+     - ArrayList
  
 ## Future Features:
 

@@ -8,7 +8,7 @@ import java.util.Comparator;
 Class for drawing ArrayLists of any type with their name
 Extends JComponent
  */
-public class ArrayListVisual<D> {
+public class ArrayListVisual<D> extends JComponent{
 
     private ArrayList<D> list;
     private String name;
@@ -22,40 +22,72 @@ public class ArrayListVisual<D> {
         changes = new ArrayList<ArrayList<D>>();
         changeNames = new ArrayList<String>();
 
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
+        changeNames.add("Initial Instantiation");
+    }
+    public ArrayListVisual(String name){
+        this.list = new ArrayList<D>();
+        this.name = name;
+        changes = new ArrayList<ArrayList<D>>();
+        changeNames = new ArrayList<String>();
+
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("Initial Instantiation");
     }
 
-    //public DrawArray<D> getDrawType(); TODO: Create this method
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        this.setBackground(Color.WHITE);
+
+        //Default Styles
+        g.setFont(new Font("sanserif", Font.BOLD, 14));
+        g.setColor(Color.DARK_GRAY);
+
+        g.setColor(Color.RED);
+        g.setFont(new Font("sanserif", Font.BOLD, 30));
+        g.drawString(this.name, 25, 40);
+        g.setFont(new Font("sanserif", Font.BOLD, 14));
+        g.setColor(Color.DARK_GRAY);
+
+        int x1 = 25, y1 = 80;
+        for(int i = 0; i<changes.size(); ++i){
+            DrawArray<D> cur = new DrawArray<D>((D[]) changes.get(i).toArray(), changeNames.get(i), DrawArray.HORIZONTAL, DrawArray.NONE);
+            cur.setXY(x1, y1);
+            g = cur.insertArray(g);
+            x1 = cur.x; y1 = cur.y;
+        }
+
+        return;
+    }
 
     //ArrayList API: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
     public void add(D e){
         list.add(e);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add(e.toString() + " was added to ArrayList");
     }
 
     public void add(int index, D element){
         list.add(index, element);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add(element.toString() + " was added to ArrayList at index " + index);
     }
 
     public void addAll(Collection<? extends D> c){
         list.addAll(c);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("New Collection Size " + c.size() + " was added to ArrayList");
     }
 
     public void addAll(int index, Collection<? extends D> c){
         list.addAll(c);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("New Collection Size " + c.size() + " was added to ArrayList at " + index);
     }
 
     public void addAll(){
         list.clear();
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("ArrayList was cleared");
     }
 
@@ -91,10 +123,12 @@ public class ArrayListVisual<D> {
     //listIterator()
     //listIterator(int index)
 
-    public D remove(int index){
+    public D removeIndex(int index){
         D tmp = list.remove(index);
-        changes.add(list);
+
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("Element at index " + index + " was removed");
+
         return tmp;
     }
 
@@ -106,18 +140,18 @@ public class ArrayListVisual<D> {
 
     public D set(int index, D element){
         D tmp = list.set(index, element);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("Element at index " + index + " was replaced with " + element.toString());
         return tmp;
     }
 
-    public int size(){
+    public int getListSize(){
         return list.size();
     }
 
     public void sort(Comparator<? super D> c){
         list.sort(c);
-        changes.add(list);
+        changes.add((ArrayList<D>) list.clone());
         changeNames.add("ArrayList was sorted");
     }
 
