@@ -1,75 +1,129 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+
 /*
 Class for drawing ArrayLists of any type with their name
 Extends JComponent
  */
-public class ArrayListVisual<D> extends JComponent{
+public class ArrayListVisual<D> {
 
     private ArrayList<D> list;
     private String name;
 
+    private ArrayList<ArrayList<D>> changes;
+    private ArrayList<String> changeNames;
+
     public ArrayListVisual(ArrayList<D> list, String name){
         this.list = list;
         this.name = name;
+        changes = new ArrayList<ArrayList<D>>();
+        changeNames = new ArrayList<String>();
+
+        changes.add(list);
+        changeNames.add("Initial Instantiation");
     }
 
-    public void set (int index, D element){
-        //TODO: Implement some observer here
-        list.set(index, element);
+    //public DrawArray<D> getDrawType(); TODO: Create this method
+
+    //ArrayList API: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+    public void add(D e){
+        list.add(e);
+        changes.add(list);
+        changeNames.add(e.toString() + " was added to ArrayList");
     }
 
-    /*
-    ArrayList: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
-    Implement ArrayList methods, except certain operations are observed for our log
-    //TODO: Learn about interfaces (ArrayList -> List) to make this happen
-     */
-
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        this.setBackground(Color.WHITE);
-
-        //Default Styles
-        g.setFont(new Font("sanserif", Font.BOLD, 14));
-        g.setColor(Color.DARK_GRAY);
-
-        //Generate Rectangle
-        int x = 25, y = 25;
-
-        /*
-        //When I stored an ArrayList of arrays
-        for(int i = 0; i<list.size(); ++i){
-            g = insertArray(names.get(i), list.get(i), x, y, g);
-            y+=100;
-        }
-        System.out.println(list.size());
-         */
-
-        g = insertArray(this.name, this.list, x, y, g);
+    public void add(int index, D element){
+        list.add(index, element);
+        changes.add(list);
+        changeNames.add(element.toString() + " was added to ArrayList at index " + index);
     }
 
-    private Graphics insertArray(String arrayName, ArrayList<D> list, int x, int y, Graphics g){
-        //Display Name
-        arrayName = arrayName.trim();
-        g.drawString(arrayName + ":", x, y+20);
-
-        //Iterate through and visualize each cell
-        int x1 = x, y1 = y+25;
-        for(int i = 0; i<list.size(); i++){
-            String content = list.get(i).toString();
-            int width = Math.max(g.getFontMetrics(g.getFont()).stringWidth(content) + 30, 50);
-            //Draw Cell
-            g.drawRect(x1, y1, width, 50);
-            //Display Contents
-            g.drawString(content, x1 + 15, y1+30);
-            //Display Index
-            int widthIndex = g.getFontMetrics(g.getFont()).stringWidth(Integer.toString(i));
-            g.drawString(Integer.toString(i), x1 + width/2 - widthIndex/2, y1 + 65);
-
-            //Update (x, y) pointer
-            x1+=width;
-        }
-        return g;
+    public void addAll(Collection<? extends D> c){
+        list.addAll(c);
+        changes.add(list);
+        changeNames.add("New Collection Size " + c.size() + " was added to ArrayList");
     }
+
+    public void addAll(int index, Collection<? extends D> c){
+        list.addAll(c);
+        changes.add(list);
+        changeNames.add("New Collection Size " + c.size() + " was added to ArrayList at " + index);
+    }
+
+    public void addAll(){
+        list.clear();
+        changes.add(list);
+        changeNames.add("ArrayList was cleared");
+    }
+
+    public Object clone(){
+        return list.clone();
+    }
+
+    public boolean contains(Object o){
+        return list.contains(o);
+    }
+
+    //ensureCapacity
+    //forEach
+
+    public D get(int index){
+        return list.get(index);
+    }
+
+    public int indexOf(Object o){
+        return list.indexOf(o);
+    }
+
+    public boolean isEmpty(){
+        return list.isEmpty();
+    }
+
+    //iterator
+
+    public int lastIndexOf(Object o){
+        return list.lastIndexOf(o);
+    }
+
+    //listIterator()
+    //listIterator(int index)
+
+    public D remove(int index){
+        D tmp = list.remove(index);
+        changes.add(list);
+        changeNames.add("Element at index " + index + " was removed");
+        return tmp;
+    }
+
+    //removeAll
+    //removeIf
+    //removeRange
+    //replaceAll
+    //retainAll
+
+    public D set(int index, D element){
+        D tmp = list.set(index, element);
+        changes.add(list);
+        changeNames.add("Element at index " + index + " was replaced with " + element.toString());
+        return tmp;
+    }
+
+    public int size(){
+        return list.size();
+    }
+
+    public void sort(Comparator<? super D> c){
+        list.sort(c);
+        changes.add(list);
+        changeNames.add("ArrayList was sorted");
+    }
+
+    //spliterator
+    //subList
+    //toArray
+    //toArray(T[] a)
+    //trimToSize()
 }
