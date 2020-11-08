@@ -1,6 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The DrawArray class visualizes 1D arrays.
+ * Because the orientation and openings of the visualization are parameterized, the application has the flexibility
+ * to be used for a variety of other data-structures.
+ * @author huskydj1
+ */
 public class DrawArray<D> extends JComponent{
 
     public static final int HORIZONTAL = 0, VERTICAL = 1;
@@ -13,6 +19,14 @@ public class DrawArray<D> extends JComponent{
     private int opening;
     private String name;
 
+    /**
+     * Creates a new DrawArray based on the provided array, name, orientation, and number of openings.
+     * All of the parameters must be offered in instantiation. They cannot be modified following.
+     * @param array the generic array which the visualization represents
+     * @param name the name of the visualized array
+     * @param orientation the orientation (horizontal/vertical) that the visualization should be
+     * @param opening specifies the openings present at the ends of the visualization
+     */
     public DrawArray(D[] array, String name, int orientation, int opening){
         this.arr = array;
         this.name = name;
@@ -20,11 +34,20 @@ public class DrawArray<D> extends JComponent{
         this.opening = opening;
     }
 
+    /**
+     * Sets the top-left "origin" point, with respect to a coordinate plane, from which the graphic is drawn
+     * @param x the x-component of the "origin" point
+     * @param y the y-component of the "origin" point
+     */
     public void setXY (int x, int y){
         this.x = x;
         this.y = y;
     }
 
+    /**
+     * Allows the visualization of a single array in its stored state
+     * @param g stores the information used by Java to render the graphic
+     */
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
@@ -34,20 +57,15 @@ public class DrawArray<D> extends JComponent{
         g.setColor(Color.DARK_GRAY);
 
         //Generate Rectangle
-
-        /*
-        //When I stored an ArrayList of arrays
-        for(int i = 0; i<list.size(); ++i){
-            g = insertArray(names.get(i), list.get(i), x, y, g);
-            y+=100;
-        }
-        System.out.println(list.size());
-         */
-
         g = insertArray(g);
         return;
     }
 
+    /**
+     * Inserts the array visualization as parameterized and stored into Graphics g
+     * @param g stores the information used by Java to render the graphic
+     * @return Graphics g after the information to render the array visualization is inserted
+     */
     public Graphics insertArray(Graphics g){
         if(orientation==DrawArray.HORIZONTAL){
             g = insertHorizontalArray(g);
@@ -58,6 +76,11 @@ public class DrawArray<D> extends JComponent{
         return g;
     }
 
+    /**
+     * Inserts a horizontal array visualization into Graphics g
+     * @param g stores the information used by Java to render the graphic
+     * @return Graphics g after the information to render the array visualization is inserted
+     */
     private Graphics insertHorizontalArray(Graphics g){
         //Display Name
         String arrayName = this.name.trim();
@@ -113,6 +136,11 @@ public class DrawArray<D> extends JComponent{
         return g;
     }
 
+    /**
+     * Inserts a vertical array visualization into Graphics g
+     * @param g stores the information used by Java to render the graphic
+     * @return Graphics g after the information to render the array visualization is inserted
+     */
     private Graphics insertVerticalArray(Graphics g) {
         //Display Name
         String arrayName = name.trim();

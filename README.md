@@ -5,9 +5,9 @@
 - Make it easier for programmers to run, debug, and understand code
 
 ## Completed Features:
-- Array:
-    - Display/Refresh
-    - Parameterize Aspects of Array
+- DrawArray:
+  - Visualize any 1D data structure
+  - Parameterize specific components to allow flexibility
 - Generic types
 - Observers:
     - ArrayList
