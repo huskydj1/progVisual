@@ -8,6 +8,7 @@ import java.awt.*;
  * @author huskydj1
  */
 public class DrawArray<D> extends JComponent{
+    //extends JComponent for paintComponent
 
     public static final int HORIZONTAL = 0, VERTICAL = 1;
     public static final int NONE = 2, FRONT = 3, BACK = 4, BOTH = 5;
@@ -85,12 +86,13 @@ public class DrawArray<D> extends JComponent{
         //Display Name
         String arrayName = this.name.trim();
         g.drawString(arrayName + ":", x, y+20);
+
+        //Stop if Array is Empty
         if(arr.length==0){
             g.setColor(Color.MAGENTA);
             g.drawString("EMPTY OBJECT PASSED", x, y+50);
             g.setColor(Color.darkGray);
-
-            y+=60;
+            y+=70;
             return g;
         }
 
@@ -132,7 +134,7 @@ public class DrawArray<D> extends JComponent{
             //Update (x, y) pointer
             x1+=width;
         }
-        y = y1 + 90;
+        y = y1 + 65 + 20;
         return g;
     }
 
@@ -145,12 +147,14 @@ public class DrawArray<D> extends JComponent{
         //Display Name
         String arrayName = name.trim();
         g.drawString(arrayName + ":", x, y + 20);
+
+        //Stop if Array is Empty
         if (arr.length == 0) {
             g.setColor(Color.red);
             g.drawString("EMPTY OBJECT PASSED", x, y + 50);
             g.setColor(Color.darkGray);
 
-            y+=60;
+            y+=70;
             return g;
         }
 
@@ -200,7 +204,7 @@ public class DrawArray<D> extends JComponent{
         int[] triangleX = {x1 + maxWidth/2, x1 + maxWidth/2 - 10, x1 + maxWidth/2 + 10}, triangleY = {y1 + 10, y1 + 20, y1 + 20};
         g.drawPolygon(triangleX, triangleY, 3);
 
-        y = y1 + 25;
+        y = y1 + 20 + 20;
         return g;
     }
 }

@@ -8,13 +8,16 @@
 - DrawArray:
   - Visualize any 1D data structure
   - Parameterize specific components to allow flexibility
-- Generic types
+  - Generic Type
 - Observers:
-    - ArrayList
+  - ArrayList
+- mainWindow
+  - Tabs
+  - Scrollable
+    - DrawArraySize.java
+  - add tabs/variables
 
 ## Features in Progress:
-- Implement mainWindow:
-  - Devise a way to allow user to add tabs/variables without touching this class
 - Add wrapper methods for rest of features to observe changes
      - Stack
      - Deque
@@ -43,8 +46,11 @@
 - GUI Details:
   - Java Documentation Tutorials:
     - ["How to Use Tabbed Panes"](https://docs.oracle.com/javase/tutorial/uiswing/components/tabbedpane.html)
+    - ["Class JTabbedPane"](https://docs.oracle.com/javase/7/docs/api/javax/swing/JTabbedPane.html)
+    - ["How to Use Scroll Panes"](https://docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html)
     - ["The JComponent Class"](https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html)
     - ["java.awt - Class Graphics"](https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics.html)
+    - []
   - [Keep on Coding's "Java Generics Tutorial"](https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding)
   - [Bucky's "Generic Return Types"](https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
 

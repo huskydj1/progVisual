@@ -1,36 +1,58 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class mainWindow{
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("TabbedPane");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setMinimumSize(new Dimension(640, 480));
+    //TODO: What type?
+    private static ArrayList<ArrayListVisual> tabList;
 
-        //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-        JTabbedPane tabbedPane = new JTabbedPane();
-        //<
+    public mainWindow(){
+        tabList = new ArrayList<ArrayListVisual>();
+    }
 
-        /*
-        Use CardLayout to Navigate Between Variables
-        Use Buttons to Check Out Difference Time Points (Create on the side as to not disturb our work)
-         */
+    public void addTab(ArrayListVisual list){
+        tabList.add(list);
+    }
 
-        ArrayListVisual<Integer> tmp = new ArrayListVisual<Integer>("Test Array");
-        tmp.add(10);
-        tmp.add(20);
-        tmp.add(30);
-        tmp.add(1);
-        tmp.add(10000);
-        //TODO: Figure out how to scroll through pane
-        tabbedPane.addTab(tmp.getName(), tmp);
+    public void viewList(){
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<");
+        System.out.println("There are currently " + tabList.size() + " lists.");
+        for(int i = 0; i<tabList.size(); ++i){
+            System.out.println(tabList.get(i).getName());
+        }
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<");
+    }
 
-        //>
-        tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
-        frame.add(tabbedPane);
-        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        frame.pack();
-        frame.setVisible(true);
+    public void visual(){
+        SwingUtilities.invokeLater(new Runnable()
+        {
+            public void run(){
+                //add scrollpane to jframe
+                JFrame frame = new JFrame("JScrollPane test");
+                JTabbedPane tab = new JTabbedPane();
+
+                for(ArrayListVisual tmp : tabList){
+                    //create a scrollpane
+                    JScrollPane scrollPane = new JScrollPane(tmp);
+                    //frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+                    tab.addTab(tmp.getName(), scrollPane);
+                }
+
+                frame.getContentPane().add(tab);
+
+                //Make it easy to close the application
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                //Set the size
+                frame.setSize(new Dimension(640, 480));
+
+                //Center the frame
+                frame.setLocationRelativeTo(null);
+
+                //make it visible
+                frame.setVisible(true);
+            }
+        });
     }
 }

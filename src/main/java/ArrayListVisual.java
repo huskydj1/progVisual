@@ -10,21 +10,33 @@ Extends JComponent
  */
 public class ArrayListVisual<D> extends JComponent{
 
+    private int PREF_W = 640;
+    private int PREF_H = 480;
+
+    @Override
+    public Dimension getPreferredSize() {
+        Dimension d = new Dimension(0, 0);
+        int x1 = 25, y1 = 80;
+        for(int i = 0; i<changes.size(); ++i){
+            DrawArraySize<D> cur = new DrawArraySize<D>((D[]) changes.get(i).toArray(), Integer.toString(i+1) + ": " + changeNames.get(i), DrawArraySize.HORIZONTAL, DrawArraySize.NONE);
+            cur.setXY(x1, y1);
+            d = cur.insertArray(d);
+            x1 = cur.x; y1 = cur.y;
+        }
+        d.width+=20; d.height+=20;
+        return d;
+    }
+
     private ArrayList<D> list;
     private String name;
+
+    public String getName(){
+        return this.name;
+    }
 
     private ArrayList<ArrayList<D>> changes;
     private ArrayList<String> changeNames;
 
-    public ArrayListVisual(ArrayList<D> list, String name){
-        this.list = list;
-        this.name = name;
-        changes = new ArrayList<ArrayList<D>>();
-        changeNames = new ArrayList<String>();
-
-        changes.add((ArrayList<D>) list.clone());
-        changeNames.add("Initial Instantiation");
-    }
     public ArrayListVisual(String name){
         this.list = new ArrayList<D>();
         this.name = name;
@@ -33,6 +45,8 @@ public class ArrayListVisual<D> extends JComponent{
 
         changes.add((ArrayList<D>) list.clone());
         changeNames.add("Initial Instantiation");
+
+        this.setLayout(new GridLayout(1, 1));
     }
 
     public void paintComponent(Graphics g){
@@ -51,7 +65,7 @@ public class ArrayListVisual<D> extends JComponent{
 
         int x1 = 25, y1 = 80;
         for(int i = 0; i<changes.size(); ++i){
-            DrawArray<D> cur = new DrawArray<D>((D[]) changes.get(i).toArray(), changeNames.get(i), DrawArray.HORIZONTAL, DrawArray.NONE);
+            DrawArray<D> cur = new DrawArray<D>((D[]) changes.get(i).toArray(), Integer.toString(i+1) + ": " + changeNames.get(i), DrawArray.HORIZONTAL, DrawArray.NONE);
             cur.setXY(x1, y1);
             g = cur.insertArray(g);
             x1 = cur.x; y1 = cur.y;
