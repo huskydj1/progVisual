@@ -2,6 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * The mainWindow class visualizes the history of changes for all of the observed, stored instances of ArrayListVisual.
+ * @author huskydj1
+ */
 public class mainWindow{
 
     //TODO: What type?
