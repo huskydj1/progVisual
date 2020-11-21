@@ -2,7 +2,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 <p float="left">
-  <img style="float: right;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" width="300" height="225">
+  <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" width="300" height="225">
   <code Hello>
 </p>
 
