@@ -1,31 +1,9 @@
 ## Program Visualizer (progVisual)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-~~~
-public class TESTER
-{
-    public static void main(String[] args)    {
-        mainWindow window = new mainWindow();
+<img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225">
 
-        ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
-        iList.add(120);
-        iList.add(2);
-        iList.add(154523);
-        iList.add(214);
-        iList.removeIndex(2);
-        window.addTab(iList);
 
-        ArrayListVisual<String> sList = new ArrayListVisual<String>("String list");
-        sList.add("Hello ");
-        sList.add("My name ");
-        sList.add(" is ");
-        sList.removeIndex(2);
-        window.addTab(sList);
-
-        window.visual();
-    }
-}
-~~~
 
 **A Java library that visualizes modifications to stored data-structures, making it easier for programmers to run, debug, and understand their code. It is currently only compatible with  ArrayLists, but more is on the way.**
 
