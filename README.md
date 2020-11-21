@@ -9,10 +9,11 @@
 - [Guide](#Guide)
 - [Features](#Completed-Features)
 - [Resources](#Resources)
+- [Contributing](#Contributing)
 - [Feedback](#Feedback)
 
 
-### Guide:
+### Guide
 
 - #### Installation
 You can use this library by making a local copy on your device!
@@ -33,7 +34,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
    We did our best to make the class compatible with  ArrayList's operations. If something is not working, please look under the documentation to understand discrepancies. You can also [leave feedback](#Feedback), if you wish!
 
 
-### Completed Features:
+### Completed Features
 <details open>
 <summary>Click to Close/Expand</summary>
 <p>
@@ -53,7 +54,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
 </p>
 </details>  
 
-### Features in Progress:
+### Features in Progress
 <details open>
 <summary>Click to Close/Expand</summary>
 <p>
@@ -80,7 +81,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
 </details>
 
 
-### Resources:
+### Resources
 ##### Helpful resources used to create this library
 - ["How to Write a Git Commit Message" - Chris Beams](https://chris.beams.io/posts/git-commit/#imperative)
 - [Choose an open source license](https://choosealicense.com/)
@@ -105,13 +106,16 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
     - []
   - [Keep on Coding's "Java Generics Tutorial"](https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding)
   - [Bucky's "Generic Return Types"](https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
+  
+### Contributing
+Contributions are always welcome! Please refer to [CONTRIBUTING.md](https://github.com/huskydj1/progVisual/blob/master/CONTRIBUTING.md) to understand how you can help! Please keep in mind that our [Code of Conduct](https://github.com/huskydj1/progVisual/blob/master/CODE_OF_CONDUCT.md) outlines the standards users should uphold while interacting with the library.
 
-### Feedback:
+### Feedback
 #### All comments, questions, and ideas are appreciated!
 
 You can reach us through [our contact form!](https://docs.google.com/forms/d/e/1FAIpQLSc_xLESmhYyBImdq7zi3NQ_zh7jUOZvVgxZ3rRdQYkt7x_YcA/viewform?usp=sf_link) Alternatively, you can make pull requests with your suggestions, ideas, or questions below, so that other users may be able to see our response.
 
-#### Suggestions and Ideas:
+#### Suggestions and Ideas
 
 <details>
 <summary>Click to Expand</summary>
@@ -126,7 +130,7 @@ You can reach us through [our contact form!](https://docs.google.com/forms/d/e/1
 </p>
 </details>
 
-#### Questions:
+#### Questions
 <details>
 <summary>Click to Expand</summary>
 <p>
