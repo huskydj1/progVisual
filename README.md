@@ -1,10 +1,7 @@
 ## Program Visualizer (progVisual)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-<img style="float: left;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225"> 
-mainWindow window = new mainWindow();
-
-ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
+<img style="float: left;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225"> mainWindow window = new mainWindow();\ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
 iList.add(120);
 iList.add(2);
 iList.add(154523);
