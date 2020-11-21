@@ -1,6 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The DrawArraySize class simulates the visualization of 1D arrays to track how the size of the visualization window is affected.
+ * Because the orientation and openings of the visualization are parameterized, the application has the flexibility
+ * to be used for a variety of other data-structures.
+ * @author huskydj1
+ */
 public class DrawArraySize<D> extends JComponent{
     //extends JComponent for paintComponent
 
