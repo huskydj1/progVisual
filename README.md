@@ -31,7 +31,7 @@ Enter your copy of ```progVisual``` and navigate to the subfolder under ```src``
 ##### 2) Necessary classes
 You will need to have ```DrawArray.java```, ```DrawArraySize.java```, and ```mainWindow.java``` in the package you wish to use this library in. The other observer classes for various data-structures can be chosen based on your needs.
 ##### 3) Using the observer classes
-<sub><sup>
+~~~
 mainWindow window = new mainWindow();
 
 ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
@@ -42,15 +42,8 @@ iList.add(214);
 iList.removeIndex(2);
 window.addTab(iList);
 
-ArrayListVisual<String> sList = new ArrayListVisual<String>("String list");
-sList.add("Hello ");
-sList.add("My name ");
-sList.add(" is ");
-sList.removeIndex(2);
-window.addTab(sList);
-
 window.visual();
-</sup></sub>
+~~~
 
 Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates an ArrayList. Copy the class into your current package and replace all instances of "ArrayList" with "ArrayListVisual" in the program(s) you wish to visualize. Your code should operate the same as before, except our observer ```ArrayListVisual``` class is now observing all of the modifications made to each instance.
 
