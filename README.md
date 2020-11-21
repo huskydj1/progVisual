@@ -3,7 +3,9 @@
 
 <p float="left">
   <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" width="300" height="225">
-  <code Hello>
+  <code>
+    Hello
+  </code>
 </p>
 
 
