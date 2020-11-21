@@ -4,31 +4,28 @@
 <p float="left">
   <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" width="300" height="225">
   <code>
-    Hello
+    //Instance of MainWindow
+    mainWindow window = new mainWindow();
+    //ArrayListVisual of Integer type
+    ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
+    iList.add(120);
+    iList.add(2);
+    iList.add(154523);
+    iList.add(214);
+    iList.removeIndex(2);
+    window.addTab(iList);
+    //ArrayListVisual of String type
+    ArrayListVisual<String> sList = new ArrayListVisual<String>("String list");
+    sList.add("Hello ");
+    sList.add("My name ");
+    sList.add(" is ");
+    sList.removeIndex(2);
+    window.addTab(sList);
+    //Visualize window
+    window.visual();
   </code>
 </p>
 
-
-~~~
-mainWindow window = new mainWindow();
-
-ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
-iList.add(120);
-iList.add(2);
-iList.add(154523);
-iList.add(214);
-iList.removeIndex(2);
-window.addTab(iList);
-
-ArrayListVisual<String> sList = new ArrayListVisual<String>("String list");
-sList.add("Hello ");
-sList.add("My name ");
-sList.add(" is ");
-sList.removeIndex(2);
-window.addTab(sList);
-
-window.visual();
-~~~)
 
 
 
