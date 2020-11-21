@@ -1,6 +1,32 @@
 ## Program Visualizer (progVisual)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
+~~~
+public class TESTER
+{
+    public static void main(String[] args)    {
+        mainWindow window = new mainWindow();
+
+        ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
+        iList.add(120);
+        iList.add(2);
+        iList.add(154523);
+        iList.add(214);
+        iList.removeIndex(2);
+        window.addTab(iList);
+
+        ArrayListVisual<String> sList = new ArrayListVisual<String>("String list");
+        sList.add("Hello ");
+        sList.add("My name ");
+        sList.add(" is ");
+        sList.removeIndex(2);
+        window.addTab(sList);
+
+        window.visual();
+    }
+}
+~~~
+
 **A Java library that visualizes modifications to stored data-structures, making it easier for programmers to run, debug, and understand their code. It is currently only compatible with  ArrayLists, but more is on the way.**
 
 **Please note that this project is released with the [Contributor Covenant Code of Conduct](https://github.com/huskydj1/progVisual/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. Our code of conduct was put in place to create an inclusive, welcoming community of developers. If a participant engages in unacceptable behavior, maintainers may take any action they deem appropriate, including warning of the offender or a permanant ban from this repository.**
@@ -106,7 +132,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
     - []
   - [Keep on Coding's "Java Generics Tutorial"](https://www.youtube.com/watch?v=h7piyWnQbZA&ab_channel=KeepOnCoding)
   - [Bucky's "Generic Return Types"](https://www.youtube.com/watch?v=QB5pQT45zvg&list=PL27BCE863B6A864E3&index=19&ab_channel=thenewboston)
-  
+
 ### Contributing
 Contributions are always welcome! Please refer to [CONTRIBUTING.md](https://github.com/huskydj1/progVisual/blob/master/CONTRIBUTING.md) to understand how you can help! Please keep in mind that our [Code of Conduct](https://github.com/huskydj1/progVisual/blob/master/CODE_OF_CONDUCT.md) outlines the standards users should uphold while interacting with the library.
 
