@@ -22,7 +22,7 @@ window.addTab(sList);
 
 window.visual();
 ~~~
-<img style="float: right;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225">
+<img style="float: right;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225">(Hello)
 
 
 
