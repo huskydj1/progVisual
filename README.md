@@ -24,9 +24,9 @@ Navigate to the folder wherein you want to make a copy of this repository using 
 ##### 1) Navigate to the subfolder
 Enter your copy of ```progVisual``` and navigate to the subfolder under ```src```, ```main```, and then ```java```. You will find the classes of this library. These can be copied, by file or by code, into your work when you need.
 ##### 2) Necessary classes
-You will need to have ```DrawArray.java```, ```DrawArraySize.java```, and ```mainWindow.java``` in the package you wish to use this library in. The other wrapper classes for various data-structures can be chosen based on your needs.
-##### 3) Using the wrapper classes
-Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates an ArrayList. Copy the class into your current package and replace all instances of "ArrayList" with "ArrayListVisual" in the program(s) you wish to visualize. Your code should operate the same as before, except our wrapper class is now observing all of the modifications made to each instance.
+You will need to have ```DrawArray.java```, ```DrawArraySize.java```, and ```mainWindow.java``` in the package you wish to use this library in. The other observer classes for various data-structures can be chosen based on your needs.
+##### 3) Using the observer classes
+Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates an ArrayList. Copy the class into your current package and replace all instances of "ArrayList" with "ArrayListVisual" in the program(s) you wish to visualize. Your code should operate the same as before, except our observer ```ArrayListVisual``` class is now observing all of the modifications made to each instance.
 
   Create an instance of "mainWindow.java" at the beginning of the program. Then, insert all ArrayListVisual variables whose history you would like to print at the end of the program using method ```addTab(ArrayListVisual list)```. Finally, print the list of observed instances using ```viewList``` and the history of their modifications using method ```visual```.
 
