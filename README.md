@@ -3,7 +3,7 @@
 
 **A Java library that visualizes modifications to stored data-structures, making it easier for programmers to run, debug, and understand their code. It is currently only compatible with  ArrayLists, but more is on the way.**
 
-**Please note that this project is released with the [Contributor Covenant Code of Conduct](https://github.com/huskydj1/progVisual/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.**
+**Please note that this project is released with the [Contributor Covenant Code of Conduct](https://github.com/huskydj1/progVisual/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. Our code of conduct was put in place to create an inclusive, welcoming community of developers. If a participant engages in unacceptable behavior, maintainers may take any action they deem appropriate, including warning of the offender or a permanant ban from this repository.**
 
 ### Table of Contents
 - [Guide](#Guide)
