@@ -1,5 +1,9 @@
 ## Program Visualizer (progVisual)
-A Java library that visualizes modifications to stored data-structures, making it easier for programmers to run, debug, and understand their code. It is currently only compatible with  ArrayLists, but more is on the way.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+
+**A Java library that visualizes modifications to stored data-structures, making it easier for programmers to run, debug, and understand their code. It is currently only compatible with  ArrayLists, but more is on the way.**
+
+**Please note that this project is released with the Contributor Covenant Code of Conduct. By participating in this project you agree to abide by its terms.**
 
 ### Table of Contents
 - [Guide](#Guide)
@@ -105,6 +109,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
 ### Feedback:
 #### All comments, questions, and ideas are appreciated!
 
+You can reach us through [our contact form!](https://docs.google.com/forms/d/e/1FAIpQLSc_xLESmhYyBImdq7zi3NQ_zh7jUOZvVgxZ3rRdQYkt7x_YcA/viewform?usp=sf_link) Alternatively, you can make pull requests with your suggestions, ideas, or questions below, so that other users may be able to see our response.
 
 #### Suggestions and Ideas:
 
@@ -116,6 +121,7 @@ Let's imagine that you chose to use ```ArrayListVisual.java```, which simulates 
     - What I mean by this is that you could switch around the order of an array by moving around elements, add elements to array lists, etc.  I'm kind of excited about your project, in that I really want to use it!  
 - I really like how you can piggyback off of an array to make the arraylist - do you think you could do the same thing but in the opposite direction? (Array-list -> array).
 - Is something like this what you are envisioning? http://www1.cs.columbia.edu/~bert/courses/3137/hw3_files/GraphDraw.java
+- **Thank you [llee4](https://github.com/llee4) for adding your ideas! We'll look into them and update the [Features section](#Completed-Features) with the ones we'd like to pursue! - progVisual team**.
 
 </p>
 </details>
