@@ -2,7 +2,6 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 <img style="float: left;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225"> 
-~~~
 mainWindow window = new mainWindow();
 
 ArrayListVisual<Integer> iList = new ArrayListVisual<Integer>("Integer list");
@@ -14,7 +13,7 @@ iList.removeIndex(2);
 window.addTab(iList);
 
 window.visual();
-~~~
+
 
 
 
