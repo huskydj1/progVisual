@@ -1,7 +1,7 @@
 ## Program Visualizer (progVisual)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-<img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225" style="float: right;" src="whatever.jpg> hello
+<img style="float: left;" src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" alt="alt text" width="300" height="225"> hello
 ~~~
 mainWindow window = new mainWindow();
 
