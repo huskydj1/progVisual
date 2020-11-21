@@ -4,7 +4,7 @@
 
 <p float="left">
   <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_demonstration.gif" width="300" height="225" >
-  <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_samplecode.PNG">
+  <img src="https://github.com/huskydj1/progVisual/blob/master/progVisual_samplecode.PNG" height="225" >
 </p>
 
 
